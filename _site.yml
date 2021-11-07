@@ -1,6 +1,7 @@
 name: "my-website"
 navbar:
   title: "My Website"
+  output_dir: "."
   left:
     - text: "Home"
       icon: fa-home
