@@ -1,0 +1,65 @@
+---
+title: "My Plots"
+
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+
+```{r library}
+
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r plots}
+data("ny_noaa")
+
+set.seed(10)
+ny_noaa = ny_noaa %>%
+  filter(
+    !is.na(prcp),
+    !is.na(snow),
+    !is.na(snwd),
+    prcp>5,
+    snow>5,
+  ) %>%
+  sample_n(300) %>%
+  mutate(year = substr(date, 1, 4))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+plot_ly(ny_noaa,
+  x = ~prcp, y = ~snow, type = "scatter", mode = "markers", alpha = 0.7)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+plot_ly(ny_noaa,
+        y = ~snwd, color = ~id, type = "box", colors = "viridis")
+```
+
+
+### Chart C
+
+```{r}
+ny_noaa_n = count(ny_noaa,year)
+plot_ly(ny_noaa_n,x = ~year, y = ~n, color = ~year, type = "bar", colors = "viridis")
+```

@@ -4,3 +4,10 @@ output: html_document
 ---
 
 
+Welcome to my personal website!
+
+Here is a link to [my GitHub Page](https://github.com/MingkuanXu)
+
+Here is a link to [my Linkedin](https://www.linkedin.com/in/mingkuan-xu-698096164/)
+
+My email address: mingkuan.xu at cumc.columbia.edu

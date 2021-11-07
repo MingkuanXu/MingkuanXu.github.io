@@ -3,6 +3,10 @@ navbar:
   title: "My Website"
   left:
     - text: "Home"
+      icon: fa-home
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "About Me"
+      icon: fa-info
+      href: aboutme.html
+    - text: "My Plots"
+      href: plot.html

@@ -1,0 +1,21 @@
+---
+title: "About Me"
+output: html_document
+---
+
+
+### Mingkuan Xu (1999/07/23)
+
+##### Biostatistics Graduate Student at Columbia University | Duke University ‘21
+
+#### Experiences
+
+Natural Language Processing Engineer @ Xiaomi Technology
+
+Investment Banking Analyst @ BOCI
+
+Research Assistant @ Duke University Medical School
+
+#### Language
+
+Chinese (Native), English (Full professional proficiency).
